@@ -2,7 +2,7 @@
 
 <http://www.infinite-scroll.com/>
 
-The jQuery and WordPress Plugins:
+The jQuery and Joomla Joomshopping endless scroll:
 
 * jQuery Plugin <http://www.infinite-scroll.com/infinite-scroll-jquery-plugin/> `v2.0.2`
 * WordPress Plugin <http://www.infinite-scroll.com/installation/>
