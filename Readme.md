@@ -7,7 +7,33 @@ The jQuery and WordPress Plugins:
 * jQuery Plugin <http://www.infinite-scroll.com/infinite-scroll-jquery-plugin/> `v2.0.2`
 * WordPress Plugin <http://www.infinite-scroll.com/installation/>
 
+##Usung##
+```javascript
+ $('.jshop_list_product').infinitescroll({
+            navSelector: 'div.pagination',    // selector for the paged navigation
+            nextSelector: "li.pagination-next a",  // selector for the NEXT link
+            itemSelector: '.list_product',     // selector for all items you'll retrieve
+            debug        : true,
+            pathParse: function(path,e){
+                console.log(path.length,e)
+                path=path + '&ff=';
+                return path
+            },
+            loading: {
+                finishedMsg: 'No more pages to load.',
+                img: 'http://i.imgur.com/6RMhx.gif'
+            }
+        },
+        // trigger on load as a callback
+        function (newElements) {
+            $("img.lazy").show().lazyload({
+                threshold: 200,
+                effect: "fadeIn"
+            });
+        }
 
+    );
+```
 ##Methods##
 A method is a command you can use to control Infinite Scroll once the plugin has been initialized. You can call on any Infinite Scroll method by using `$('.selector').infinitescroll('method-name');`.
 
