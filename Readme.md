@@ -13,7 +13,7 @@ The jQuery and Joomla Joomshopping endless scroll:
             navSelector: 'div.pagination',    // selector for the paged navigation
             nextSelector: "li.pagination-next a",  // selector for the NEXT link
             itemSelector: '.list_product',     // selector for all items you'll retrieve
-            debug        : true,
+          //  debug        : true, //for testing
             pathParse: function(path,e){
                 console.log(path.length,e)
                 path=path + '&ff=';
